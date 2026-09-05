@@ -28,6 +28,24 @@
           <AssociatedConnUserName />
           <FullPath>DBcreate.sql</FullPath>
         </FileNode>
+        <FileNode Name="Pruebas.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NACHO-DESKTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NACHO-DESKTOP\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Pruebas.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NACHO-DESKTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NACHO-DESKTOP\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="StoreProcedures.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NACHO-DESKTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NACHO-DESKTOP\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>StoreProcedures.sql</FullPath>
+        </FileNode>
         <FileNode Name="TableEmpleado.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NACHO-DESKTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NACHO-DESKTOP\SQLEXPRESS</AssociatedConnSrvName>

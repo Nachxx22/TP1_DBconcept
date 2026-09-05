@@ -1,3 +1,4 @@
+USE BD_Empleados;
 IF OBJECT_ID('dbo.Empleado', 'U') IS NOT NULL
     DROP TABLE dbo.Empleado;
 GO
@@ -10,9 +11,10 @@ CREATE TABLE dbo.Empleado
 );
 GO
 
+--Select * from dbo.Empleado;
 
 
-Carga de datos de prueba (40 filas)
+--Carga de datos de prueba (40 filas)
 INSERT INTO dbo.Empleado (Nombre, Salario) VALUES ('Juan Perez', 200000.00);
 INSERT INTO dbo.Empleado (Nombre, Salario) VALUES ('Ana Rojas', 250000.00);
 INSERT INTO dbo.Empleado (Nombre, Salario) VALUES ('Luis Chaves', 200000.00);
