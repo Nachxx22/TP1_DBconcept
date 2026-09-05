@@ -1,10 +1,10 @@
 from flask import Flask
 
-app = Flask(__name__)
+website = Flask(__name__)
 
-@app.route("/")
+@website.route("/")
 def inicio():
-    return "Proyecto Base de Datos funcionando"
+    return "Proyecto 1 está funcionando correctamente"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    website.run(debug=True)
