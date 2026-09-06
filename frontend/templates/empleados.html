@@ -4,28 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista de Empleados</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='estilo.css') }}">
 </head>
 
 <body>
 
-    <h1>Lista de Empleados</h1>
+    <div class="contenedor">
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Salario</th>
-            </tr>
-        </thead>
+        <h1 class="titulo">Lista de Empleados</h1>
 
-        <tbody>
-        </tbody>
-    </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Salario</th>
+                </tr>
+            </thead>
 
-    <br>
+            <tbody>
+            </tbody>
+        </table>
 
-    <button>Insertar Empleado</button>
+        <button class="boton">
+            Insertar Empleado
+        </button>
+
+    </div>
 
 </body>
 
