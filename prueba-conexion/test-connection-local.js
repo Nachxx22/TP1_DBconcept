@@ -8,14 +8,14 @@ require('dotenv').config();
 const sql = require('mssql');
 
 // Si es instancia default: server = '100.x.x.x' (IP de Tailscale de la máquina host(Nacho Desktop))
-// Si es instancia nombrada (ej. SQLEXPRESS) en este caso: server = '100.118.7.79\\SQLEXPRESS' (de esta manera no funciona)
+// Si es instancia nombrada (ej. SQLEXPRESS) en este caso: server = '100.xx.xx.xx\\SQLEXPRESS' (de esta manera no funciona)
 const config = {
-    server: 'process.env.DB_SERVER'
+    server: process.env.DB_SERVER
     ,
     port: 1433,
     database: 'BD_Empleados',
-    user: 'process.env.DB_USER',
-    password: 'process.env.DB_PASSWORD',
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     options: {
         encrypt: false,             // no es necesario en red local/Tailscale (Para la nube si)
         trustServerCertificate: true // evita error de certificado autofirmado en local
