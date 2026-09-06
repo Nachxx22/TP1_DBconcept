@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insertar Empleado</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1 class="titulo">Insertar Empleado</h1>
+
+        <form>
+
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="campo">
+            <label for="salario">Salario:</label>
+            <input type="text" id="salario" name="salario" required>
+            </div>
+
+            <button type="submit" class="boton">
+                Insertar
+            </button>
+            <a class="boton2"
+                href="{{ url_for('inicio') }}">
+                 Regresar
+            </a>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
