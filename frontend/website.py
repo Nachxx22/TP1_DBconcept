@@ -62,6 +62,8 @@ def insertar_empleado(nombre, salario):
 
 #Aquí se definen las rutas de la aplicación web
 
+
+#Aquí se definen las rutas de la aplicación web
 #"Llamada a la página 1 o principal, donde muestra tabla y boton"
 @app.route("/")
 def inicio():
@@ -92,6 +94,21 @@ def add():
             return render_template("add.html", error=mensaje)
 
     return render_template("add.html", error=None)
+
+
+
+# Ruta temporal para probar la pantalla de éxito
+@app.route("/prueba-exito")
+def prueba_exito():
+    return render_template("exito.html")
+
+
+
+
+# Ruta temporal para probar la pantalla de error
+@app.route("/prueba-error")
+def prueba_error():
+    return render_template("error.html")
 
 
 if __name__ == "__main__":
