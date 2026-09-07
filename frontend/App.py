@@ -1,10 +1,6 @@
 """
 Instalación previa (una sola vez):
     pip install flask pyodbc python-dotenv
-
-Requiere tener instalado "ODBC Driver 17 for SQL Server" (u 18) en Windows.
-Para verificar cuáles tenés disponibles, corré en una consola de Python:
-    import pyodbc; print(pyodbc.drivers())
 """
 
 import os

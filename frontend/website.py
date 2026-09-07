@@ -3,6 +3,7 @@ import os
 import pyodbc
 from dotenv import load_dotenv
 
+#para cargar las variables de entorno desde el archivo .env
 load_dotenv()
 
 #Se decidió trabajar con flask para crear la página web
@@ -14,7 +15,7 @@ DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_NAME = "BD_Empleados"
 
-
+#Para definir los parametros de la conexion a la base de datos se necesita el archivo .env bien configurado con los datos de conexión a la base de datos.
 def obtener_conexion():
     """Abre una conexión nueva a SQL Server."""
     cadena_conexion = (
@@ -28,7 +29,7 @@ def obtener_conexion():
     return pyodbc.connect(cadena_conexion)
 
 
-def obtener_empleados():
+def obtener_empleados(): # Obtiene la lista de empleados desde la base de datos utilizando el stored procedure sp_ObtenerEmpleados
     """Llama a sp_ObtenerEmpleados y devuelve una lista de diccionarios."""
     conexion = obtener_conexion()
     try:
@@ -43,7 +44,7 @@ def obtener_empleados():
         conexion.close()
 
 
-def insertar_empleado(nombre, salario):
+def insertar_empleado(nombre, salario): #Envia los datos del nuevo empleado a la base de datos utilizando el stored procedure sp_InsertarEmpleado y maneja el error en caso de que el nombre del empleado ya exista en la base de datos.
     """Llama a sp_InsertarEmpleado y devuelve (codigo_error, mensaje)."""
     conexion = obtener_conexion()
     try:
@@ -58,16 +59,13 @@ def insertar_empleado(nombre, salario):
         return codigo_error, mensaje
     finally:
         conexion.close()
-
-
-#Aquí se definen las rutas de la aplicación web
-
+        
 
 #Aquí se definen las rutas de la aplicación web
 #"Llamada a la página 1 o principal, donde muestra tabla y boton"
 @app.route("/")
 def inicio():
-    empleados = obtener_empleados()
+    empleados = obtener_empleados()  # Obtener la lista de empleados a traves de la función obtener_empleados()
     return render_template("empleados.html", empleados=empleados)
 
 
