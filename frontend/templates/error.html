@@ -1,0 +1,23 @@
+<!--Este codigo de error.html va a desplegar una pagina pequeña indicando que hubo un error en insertar el empleado-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+
+<body>
+    <div class="resultado resultadoError">
+        <h2>Error</h2>
+        <p>Empleado ya existe en la base de datos.</p>
+        <a class="botonError" href="/add">
+            Intentar de nuevo
+        </a>
+    </div>
+</body>
+
+</html>
