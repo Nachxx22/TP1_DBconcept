@@ -25,7 +25,14 @@
             </thead>
 
             <tbody>
-            </tbody>
+    {% for empleado in empleados %}
+    <tr>
+        <td>{{ empleado.Id }}</td>
+        <td>{{ empleado.Nombre }}</td>
+        <td>{{ "%.2f"|format(empleado.Salario) }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
         </table>
 
         <a class="boton" href="/add">

@@ -20,6 +20,9 @@ y validaciones para que se guarde correctamente el empleado a la base de datos--
     <div class="contenedor">
 
         <h1 class="titulo">Insertar Empleado</h1>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
 
         <form method="POST" action="/add">
 
