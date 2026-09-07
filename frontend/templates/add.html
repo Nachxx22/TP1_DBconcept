@@ -20,7 +20,15 @@ y validaciones para que se guarde correctamente el empleado a la base de datos--
     <div class="contenedor">
 
         <h1 class="titulo">Insertar Empleado</h1>
-
+        
+        <!--Muestra el mensaje si python envía uno (uso de jinja) -->
+        {% if mensaje %}
+            <div class="mensaje">
+                {{ mensaje }}.
+            </div>
+        {% endif %}
+        
+        <!--Formulario para insertar un nuevo empleado, con los campos nombre y salario,-->
         <form method="POST" action="/add">
 
             <div class="campo">
