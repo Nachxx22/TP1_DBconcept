@@ -22,6 +22,12 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="AccesoUsersSP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NACHO-DESKTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>NACHO-DESKTOP\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>AccesoUsersSP.sql</FullPath>
+        </FileNode>
         <FileNode Name="DBcreate.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NACHO-DESKTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>NACHO-DESKTOP\SQLEXPRESS</AssociatedConnSrvName>
@@ -33,12 +39,6 @@
           <AssociatedConnSrvName>NACHO-DESKTOP\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Pruebas.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SQLQuery1.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NACHO-DESKTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>NACHO-DESKTOP\SQLEXPRESS</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SQLQuery1.sql</FullPath>
         </FileNode>
         <FileNode Name="StoreProcedures.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:NACHO-DESKTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>

@@ -15,9 +15,9 @@ BEGIN
         FROM
             dbo.Empleado AS e
         ORDER BY
-            e.Nombre ASC;
+            e.Nombre ASC;         --acomoda la tabla de manera alfabetica ascendente
     END TRY
-    BEGIN CATCH
+    BEGIN CATCH            --En caso de algun errror en la base de datos para obtener los empleados se pueda manejar y mostrar el codigo y mnensaje del error
         SELECT
             ERROR_NUMBER()  AS CodigoError,
             ERROR_MESSAGE() AS Mensaje;
@@ -28,8 +28,8 @@ END
 GO
 
 -- 5. SP: Insertar un empleado nuevo
---    - Valida duplicados manualmente (NO con índice unique)
---    - Retorna código de éxito/error para que la UI reaccione
+--Valida duplicados manualmente (NO con índice unique)
+--Retorna código de éxito/error para que la UI reaccione
 CREATE OR ALTER PROCEDURE dbo.sp_InsertarEmpleado
     @Nombre  VARCHAR(128),
     @Salario MONEY
@@ -45,7 +45,7 @@ BEGIN
         FROM
             dbo.Empleado AS e
         WHERE
-            e.Nombre = @Nombre;
+            e.Nombre = @Nombre;  -- comprueba que no exista una fila con el mismo nombre con el que se quiere insertar la nueva fila en la tabla empleados
 
         IF @CantidadExistente > 0
         BEGIN
@@ -55,7 +55,7 @@ BEGIN
 
             RETURN;
         END
-
+		-- en caso de no existir ningún duplicado hace el insert en la tabla
         INSERT INTO dbo.Empleado (Nombre, Salario)
         VALUES (@Nombre, @Salario);
 
