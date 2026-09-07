@@ -210,3 +210,12 @@ tr:hover {
 .botonError:hover {
     background-color: #7F1D1D;
 }
+
+/* 
+   DISEÑO DE LA PAGINA PRINCIPAL SI NO HAY EMPLEADOS
+   ----------------------------------------------------------- */
+   .sinEmpleados {
+    text-align: center;
+    color: #6B7280;
+    padding: 25px;
+}

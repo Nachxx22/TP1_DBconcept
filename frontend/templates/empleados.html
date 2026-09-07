@@ -24,8 +24,24 @@
                 </tr>
             </thead>
 
-            <tbody>
-            </tbody>
+                <tbody>
+                    <!--S i la lista tiene emplados, muestra info, sino muestra mensaje de que no hay-->
+                    {% if empleados %}
+                
+                        {% for empleado in empleados %}
+                            <tr>
+                                <td>{{ empleado[0] }}</td>
+                                <td>{{ empleado[1] }}</td>
+                                <td>{{ empleado[2] }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="3">No hay empleados registrados.</td>
+                        </tr>
+                    {% endif %}
+
+                </tbody>
         </table>
 
         <a class="boton" href="/add">
