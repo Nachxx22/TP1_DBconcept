@@ -1,0 +1,27 @@
+
+<!--Este codigo de exito es la pagina que se despliegua cuando la insercion de un empleado es exitosa-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Inserción del empleado ha sido exitosa</title>
+
+        <link rel="stylesheet"
+              href="{{ url_for('static', filename='estilo.css') }}">
+    </head>
+
+    <body>
+        <div class="resultado resultadoExito">
+            <h2>Inserción exitosa</h2>
+            <p>El empleado ha sido insertado correctamente en la base de datos.</p>
+            <a class="botonExito" href="/">
+                Volver a la página principal
+            </a>
+
+        </div>
+
+    </body>
+
+</html>

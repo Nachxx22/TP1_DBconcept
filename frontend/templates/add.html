@@ -1,0 +1,72 @@
+
+
+<!--Este código add.html es el codigo que corre la página de inserción de empleados 
+Contiene el formulario para agregar nuevos empleados con sus respectivas restricciones
+y validaciones para que se guarde correctamente el empleado a la base de datos-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insertar Empleado</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1 class="titulo">Insertar Empleado</h1>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST" action="/add">
+
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+
+                <!--Especificaciones del input (no permite dejar vacio, caracteres permitidos
+                # explcia al usuario el formato que debe usar para el nombre)-->
+                <input 
+                    type="text" 
+                    id="nombre" 
+                    name="nombre" 
+                    required
+                    pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü \-]+"
+                    title="Solo se permiten letras, espacios y/0 guiones.">
+            </div>
+
+
+            <div class="campo">
+            <label for="salario">Salario:</label>
+
+            <!--Especificaciones del input (no permite dejar vacio, caracteres permitidos
+            explica al usuario el formato que debe usar para el salario)-->
+            <input 
+                type="text" 
+                id="salario" 
+                name="salario" 
+                required
+                pattern="^[0-9]+(\.[0-9]{1,4})?$"
+                title="Solo se permiten números y 4 decimales como máximo.">
+            </div>
+
+            <button type="submit" class="boton">
+                Insertar
+            </button>
+            <a class="boton2"
+                href="/">
+                 Regresar
+            </a>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

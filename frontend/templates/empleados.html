@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Empleados</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1 class="titulo">Lista de Empleados</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Salario</th>
+                </tr>
+            </thead>
+
+               
+            <tbody>
+    {% for empleado in empleados %}
+    <tr>
+        <td>{{ empleado.Id }}</td>
+        <td>{{ empleado.Nombre }}</td>
+        <td>{{ "%.2f"|format(empleado.Salario) }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+        </table>
+
+        <a class="boton" href="/add">
+            Insertar Empleado
+        </a>
+    </div>
+
+</body>
+
+</html>

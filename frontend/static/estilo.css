@@ -1,0 +1,221 @@
+/* ----------------------------
+   DISEÑO GENERAL DE LAS PÁGINAS
+   -------------------------------------------------------- */
+
+body {
+    /* diseño de toda la pagina */
+    font-family: Arial, sans-serif;
+    background-color: #F3F4F6;
+    color: #111827;
+    margin: 0;
+    padding: 40px;
+}
+
+.contenedor {
+    width: 750px;
+    margin: auto;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 15px rgba(17, 24, 39, 0.08);
+}
+
+.titulo {
+    background-color: #172033;
+    color: #FFFFFF;
+    padding: 18px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+
+
+/* 
+   Tabla de empleados
+   -----------------*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #F3F4F6;
+    color: #111827;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+td {
+    padding: 12px;
+    color: #111827;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+tr:hover {
+    background-color: #F9FAFB;
+}
+
+
+/* 
+   DISEÑO DE BOTONES GENERALES
+   --------------------------- */
+
+.boton {
+    margin-top: 25px;
+    padding: 11px 20px;
+    background-color: #059669;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #047857;
+}
+
+
+/* 
+   dISEÑO DE LA PAGINA DE FORMULARIO
+   Insertar empleado
+   ---------------------------------------------------------- */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.campo input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.boton,
+.boton2 {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.boton2 {
+    margin-left: 10px;
+    padding: 11px 20px;
+    background-color: #FFFFFF;
+    color: #111827;
+    border: 1px solid #E5E7EB;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.boton2:hover {
+    background-color: #F3F4F6;
+}
+
+.mensaje {
+    background-color: #ECFDF5;
+    color: #047857;
+    border: 1px solid #A7F3D0;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+
+/* 
+   DISEÑO DE LAS PÁGINAS DE RESULTADOS
+   ----------------------------------------------------------- */
+
+.resultado {
+    width: 420px;
+    margin: 100px auto;
+    padding: 35px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(17, 24, 39, 0.08);
+}
+
+.resultado h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.resultado p {
+    margin-bottom: 25px;
+}
+
+/* 
+   RESULTADO EXITOSO
+   ----------------------------------------------------------- */
+
+.resultadoExito {
+    border: 1px solid #A7F3D0;
+    background-color: #ECFDF5;
+}
+
+.resultadoExito h2 {
+    color: #047857;
+}
+.botonExito {
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    background-color: #059669;
+    color: #FFFFFF;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botonExito:hover {
+    background-color: #047857;
+}
+
+/* 
+   RESULTADO DE ERROR
+   ----------------------------------------------------------- */
+
+.resultadoError {
+    border: 1px solid #FECACA;
+    background-color: #FEF2F2;
+}
+
+.resultadoError h2 {
+    color: #991B1B;
+}
+
+.botonError {
+    display: inline-block;
+    padding: 11px 20px;
+    background-color: #991B1B;
+    color: #FFFFFF;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botonError:hover {
+    background-color: #7F1D1D;
+}
+
+/* 
+   DISEÑO DE LA PAGINA PRINCIPAL SI NO HAY EMPLEADOS
+   ----------------------------------------------------------- */
+   .sinEmpleados {
+    text-align: center;
+    color: #6B7280;
+    padding: 25px;
+}
